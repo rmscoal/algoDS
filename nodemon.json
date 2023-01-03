@@ -1,0 +1,8 @@
+{
+  "watch": [
+    "./typescript/src"
+  ],
+  "ext": "ts,js",
+  "ignore": [],
+  "exec": "ts-node --esm typescript/src/index.ts"
+}

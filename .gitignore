@@ -1,1 +1,10 @@
+# Ignoring javascript or typescript setups
 **/node_modules
+**/package-lock.json
+**/yarn.lock
+
+# Ignoreing golang setups
+**/go.mod
+
+# vscode settings
+.vscode
