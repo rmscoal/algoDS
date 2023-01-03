@@ -3,11 +3,12 @@ import Benchmark from 'benchmark';
 import { log } from 'console';
 import Decibinary from '../src/leetcode/decibinary.js';
 import TwoSum from '../src/leetcode/twosum.js';
+import CollectGarbage from '../src/leetcode/collectgarbage.js';
 
 export default class CustomBenchmark {
   static suite: Benchmark.Suite;
 
-  public static Decibinary(s: string) {
+  public static DecibinaryBenchmark(s: string) {
     this.suite = new Benchmark.Suite();
 
     const dec: Decibinary = new Decibinary(s);
@@ -29,7 +30,7 @@ export default class CustomBenchmark {
       .run({ async: false });
   }
 
-  public static TwoSum(nums: Array<number>, target: number) {
+  public static TwoSumBenchmark(nums: Array<number>, target: number) {
     this.suite = new Benchmark.Suite();
 
     const twoSum: TwoSum = new TwoSum(nums, target);
@@ -43,6 +44,23 @@ export default class CustomBenchmark {
       .add('TwoSum#FastSolver', () => {
         twoSum.FastSolver();
       })
+      // add listeners
+      .on('cycle', (event: { target: any; }) => {
+        log(String(event.target));
+      })
+      .on('complete', function () {
+        log(`The fastest method is ${this.filter('fastest').map('name')}`);
+      })
+      // run async or not
+      .run({ async: false });
+  }
+
+  public static CollectGarbageBenchmark(garbage: Array<string>, travel: Array<number>) {
+    this.suite = new Benchmark.Suite();
+
+    this.suite.add('CollectGarbage#Solver', () => {
+      CollectGarbage.Solver(garbage, travel);
+    })
       // add listeners
       .on('cycle', (event: { target: any; }) => {
         log(String(event.target));
