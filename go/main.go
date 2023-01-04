@@ -176,6 +176,10 @@ func main() {
 	SA := &leetcode.ShuffleArray{}
 	fmt.Println("Shuffle Array", SA.Solver([]int{2, 5, 1, 3, 4, 7}, 3))
 
+	CG := &leetcode.CollectGarbage{}
+	fmt.Println("Collect Garbage", CG.FastSolver([]string{"G", "M", "P"}, []int{1, 3}))
+	fmt.Println("Collect Garbage", CG.FastSolver([]string{"G", "P", "GP", "GG"}, []int{2, 4, 3}))
+
 	fmt.Println("------------------Interview-------------------")
 	Test := &interviews.Test{}
 	fmt.Println("Test:", Test.Tes())
