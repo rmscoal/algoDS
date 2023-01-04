@@ -51,6 +51,9 @@ export default class CustomBenchmark {
         this.suite.add('CollectGarbage#Solver', () => {
             CollectGarbage.Solver(garbage, travel);
         })
+            .add('CollectGarbage#FastSolver', () => {
+            CollectGarbage.FastSolver(garbage, travel);
+        })
             // add listeners
             .on('cycle', (event) => {
             log(String(event.target));

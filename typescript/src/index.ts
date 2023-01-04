@@ -21,6 +21,9 @@ log('Two Sum SlowSolver: ', twoSum2.SlowSolver());
 log('Two Sum FastSolver: ', twoSum2.FastSolver());
 
 // Renewed Class constructor
-log('Collect Garbage: ', CollectGarbage.Solver(['G', 'P', 'GP', 'GG'], [2, 4, 3]));
-log('Collect Garbage: ', CollectGarbage.Solver(['MMM', 'PGM', 'GP'], [3, 10]));
-log('Collect Garbage: ', CollectGarbage.Solver(['G', 'M', 'P'], [1, 3])); // => 8.. G counts only first house
+log('Collect Garbage Solver: ', CollectGarbage.Solver(['G', 'P', 'GP', 'GG'], [2, 4, 3]));
+log('Collect Garbage Solver: ', CollectGarbage.Solver(['MMM', 'PGM', 'GP'], [3, 10]));
+log('Collect Garbage Solver: ', CollectGarbage.Solver(['G', 'M', 'P'], [1, 3])); // => 8.. G counts only first house
+log('Collect Garbage FastSolver: ', CollectGarbage.FastSolver(['G', 'M', 'P'], [1, 3])); // => 8.. G counts only first house
+log('Collect Garbage FastSolver: ', CollectGarbage.FastSolver(['MMM', 'PGM', 'GP'], [3, 10]));
+log('Collect Garbage FastSolver: ', CollectGarbage.FastSolver(['G', 'P', 'GP', 'GG'], [2, 4, 3]));

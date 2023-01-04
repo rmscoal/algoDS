@@ -8,6 +8,11 @@ export default class CollectGarbage {
    * @public @static
    * @param garbage garbage in each house
    * @param travel time takes to travel to each houses
+   *
+   * Time-complexity: O(3n)
+   * Space-complexity: O(1)
+   *
+   * This solution is slow and memory hungry.
    */
   public static Solver(garbage: Array<string>, travel: Array<number>): number {
     // Define type of garbages and its properties.
@@ -92,5 +97,65 @@ export default class CollectGarbage {
     }
 
     return min;
+  }
+
+  /**
+   * @public @static
+   * @param garbage garbage in each house
+   * @param travel time takes to travel to each houses
+   *
+   * Time-complexity: O(n)
+   * Space-complexity: O(1)
+   *
+   * This solution is efficient
+   */
+  public static FastSolver(garbage: Array<string>, travel: Array<number>): number {
+    // Defines the maximum house where it includes the
+    // garbage of each types.
+    let maxHouseP: number = 0;
+    let maxHouseG: number = 0;
+    let maxHouseM: number = 0;
+
+    // Return variable:
+    let res: number = 0;
+
+    // This for loops finds the maximum house index
+    // for each garbage type and adds the length
+    // of the garbage on each houses since the time
+    // it takes to collect any garbage is identical
+    // regarding the garbage type.
+    for (let i = 0; i < garbage.length; i += 1) {
+      if (garbage[i].includes('P')) {
+        maxHouseP = i;
+      }
+
+      if (garbage[i].includes('G')) {
+        maxHouseG = i;
+      }
+
+      if (garbage[i].includes('M')) {
+        maxHouseM = i;
+      }
+
+      res += garbage[i].length;
+    }
+
+    // Next finds the time it takes for the garbage
+    // collectors to travel.
+    for (let i = 0; i < travel.length; i += 1) {
+      if (i < maxHouseG) {
+        res += travel[i];
+      }
+
+      if (i < maxHouseP) {
+        res += travel[i];
+      }
+
+      if (i < maxHouseM) {
+        res += travel[i];
+      }
+    }
+
+    return res;
   }
 }
