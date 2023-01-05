@@ -7,7 +7,7 @@ import (
 )
 
 // Benchmarking with various inputs
-var table = []struct {
+var collectGarbageTestCases = []struct {
 	garbage []string
 	travel  []int
 }{
@@ -26,7 +26,7 @@ var table = []struct {
 
 func BenchmarkCollectGarbageFastSolver(b *testing.B) {
 	CG := &leetcode.CollectGarbage{}
-	for _, v := range table {
+	for _, v := range collectGarbageTestCases {
 		b.Run(fmt.Sprintf("garbage_%+v and travel_%+v", v.garbage, v.travel), func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
 				CG.FastSolver(v.garbage, v.travel)
