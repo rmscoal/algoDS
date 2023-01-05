@@ -4,6 +4,7 @@ import { log } from 'console';
 import Decibinary from '../src/leetcode/decibinary.js';
 import TwoSum from '../src/leetcode/twosum.js';
 import CollectGarbage from '../src/leetcode/collectgarbage.js';
+import MaxProfit from '../src/leetcode/maxprofit.js';
 export default class CustomBenchmark {
     static DecibinaryBenchmark(s) {
         this.suite = new Benchmark.Suite();
@@ -53,6 +54,21 @@ export default class CustomBenchmark {
         })
             .add('CollectGarbage#FastSolver', () => {
             CollectGarbage.FastSolver(garbage, travel);
+        })
+            // add listeners
+            .on('cycle', (event) => {
+            log(String(event.target));
+        })
+            .on('complete', function () {
+            log(`The fastest method is ${this.filter('fastest').map('name')}`);
+        })
+            // run async or not
+            .run({ async: false });
+    }
+    static MaxProfitBenchmark(input) {
+        this.suite = new Benchmark.Suite();
+        this.suite.add('MaxProfit#Solver', () => {
+            MaxProfit.Solver(input);
         })
             // add listeners
             .on('cycle', (event) => {
