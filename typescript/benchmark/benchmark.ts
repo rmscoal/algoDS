@@ -97,7 +97,7 @@ export default class CustomBenchmark {
   public static BalancedStringsBenchmark(input: string) {
     this.suite = new Benchmark.Suite();
 
-    this.suite.add('MaxProfit#Solver', () => {
+    this.suite.add('BalancedStrings#Solver', () => {
       BalancedStrings.Solver(input);
     })
       // add listeners
