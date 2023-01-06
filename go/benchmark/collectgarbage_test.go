@@ -29,7 +29,7 @@ func BenchmarkCollectGarbageFastSolver(b *testing.B) {
 	for _, v := range collectGarbageTestCases {
 		b.Run(fmt.Sprintf("garbage_%+v and travel_%+v", v.garbage, v.travel), func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
-				CG.FastSolver(v.garbage, v.travel)
+				CG.Solver(v.garbage, v.travel)
 			}
 		})
 	}

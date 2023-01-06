@@ -177,8 +177,13 @@ func main() {
 	fmt.Println("Shuffle Array", SA.Solver([]int{2, 5, 1, 3, 4, 7}, 3))
 
 	CG := &leetcode.CollectGarbage{}
-	fmt.Println("Collect Garbage", CG.FastSolver([]string{"G", "M", "P"}, []int{1, 3}))
-	fmt.Println("Collect Garbage", CG.FastSolver([]string{"G", "P", "GP", "GG"}, []int{2, 4, 3}))
+	fmt.Println("Collect Garbage", CG.Solver([]string{"G", "M", "P"}, []int{1, 3}))
+	fmt.Println("Collect Garbage", CG.Solver([]string{"G", "P", "GP", "GG"}, []int{2, 4, 3}))
+
+	DM := &leetcode.DecodeMessage{}
+	fmt.Println("Decode Message Solver:", DM.Solver("the quick brown fox jumps over the lazy dog", "vkbs bs t suepuv"))
+	fmt.Println("Decode Message Solver:", DM.Solver("eljuxhpwnyrdgtqkviszcfmabo", "zwx hnfx lqantp mnoeius ycgk vcnjrdb"))
+	fmt.Println("Decode Message Solver:", DM.FastSolver("eljuxhpwnyrdgtqkviszcfmabo", "zwx hnfx lqantp mnoeius ycgk vcnjrdb"))
 
 	fmt.Println("------------------Interview-------------------")
 	Test := &interviews.Test{}

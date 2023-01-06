@@ -28,6 +28,7 @@ type ShuffleString struct{}          // easy, string
 type ExcelSheet struct{}             // easy, string
 type MoveBallToBox struct{}          // medium string
 type CollectGarbage struct{}         // medium, string
+type DecodeMessage struct{}          // medium, string
 
 type ArrayPermuatation struct{} // easy, array
 type RunningSumArray struct{}   // easy, array

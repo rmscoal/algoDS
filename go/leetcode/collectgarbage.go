@@ -2,7 +2,7 @@ package leetcode
 
 import "strings"
 
-func (c *CollectGarbage) FastSolver(garbage []string, travel []int) int {
+func (c *CollectGarbage) Solver(garbage []string, travel []int) int {
 	// Returned variable:
 	var res int = 0
 
