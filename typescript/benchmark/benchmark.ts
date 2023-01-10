@@ -6,6 +6,7 @@ import TwoSum from '../src/leetcode/twosum.js';
 import CollectGarbage from '../src/leetcode/collectgarbage.js';
 import MaxProfit from '../src/leetcode/maxprofit.js';
 import BalancedStrings from '../src/leetcode/balancedstrings.js';
+import RuleMatching from '../src/leetcode/rulematching.js';
 
 export default class CustomBenchmark {
   static suite: Benchmark.Suite;
@@ -100,6 +101,28 @@ export default class CustomBenchmark {
     this.suite.add('BalancedStrings#Solver', () => {
       BalancedStrings.Solver(input);
     })
+      // add listeners
+      .on('cycle', (event: { target: any; }) => {
+        log(String(event.target));
+      })
+      .on('complete', function () {
+        log(`The fastest method is ${this.filter('fastest').map('name')}`);
+      })
+      // run async or not
+      .run({ async: false });
+  }
+
+  public static RuleMatchingBenchmark(input: {
+    items: Array<Array<string>>, ruleKey: string, ruleValue: string
+  }) {
+    this.suite = new Benchmark.Suite();
+
+    this.suite.add('RuleMatching#Solver', () => {
+      RuleMatching.Solver(input.items, input.ruleKey, input.ruleValue);
+    })
+      .add('RuleMatching#FastSolver', () => {
+        RuleMatching.FastSolver(input.items, input.ruleKey, input.ruleValue);
+      })
       // add listeners
       .on('cycle', (event: { target: any; }) => {
         log(String(event.target));

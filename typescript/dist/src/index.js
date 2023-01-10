@@ -4,6 +4,7 @@ import TwoSum from './leetcode/twosum.js';
 import CollectGarbage from './leetcode/collectgarbage.js';
 import MaxProfit from './leetcode/maxprofit.js';
 import BalancedStrings from './leetcode/balancedstrings.js';
+import RuleMatching from './leetcode/rulematching.js';
 log('------------ Welcome to Competitive Programming ------------\n');
 log('------------ Leetcode ------------');
 const dec = new Decibinary('1234');
@@ -29,4 +30,5 @@ log('Max Profit: ', MaxProfit.Solver([7, 1, 5, 3, 6, 4]));
 log('Balanced Strings Solver: ', BalancedStrings.Solver('LLLLRRRR'));
 log('Balanced Strings Solver: ', BalancedStrings.Solver('RLRRLLRLRL'));
 log('Balanced Strings Solver: ', BalancedStrings.Solver('RLRRRLLRLL'));
+log('Rule Matcing Solver:', RuleMatching.Solver([['phone', 'blue', 'pixel'], ['computer', 'silver', 'phone'], ['phone', 'gold', 'iphone']], 'type', 'phone'));
 //# sourceMappingURL=index.js.map
