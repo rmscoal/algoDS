@@ -185,6 +185,10 @@ func main() {
 	fmt.Println("Decode Message Solver:", DM.Solver("eljuxhpwnyrdgtqkviszcfmabo", "zwx hnfx lqantp mnoeius ycgk vcnjrdb"))
 	fmt.Println("Decode Message Solver:", DM.FastSolver("eljuxhpwnyrdgtqkviszcfmabo", "zwx hnfx lqantp mnoeius ycgk vcnjrdb"))
 
+	KCS := &leetcode.KeepCitySkyline{}
+	fmt.Println("Keep City Skyline Solver:", KCS.Solver([][]int{{3, 0, 8, 4}, {2, 4, 5, 7}, {9, 2, 6, 3}, {0, 3, 1, 0}}))
+	fmt.Println("Keep City Skyline Solver:", KCS.Solver([][]int{{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}))
+
 	fmt.Println("------------------Interview-------------------")
 	Test := &interviews.Test{}
 	fmt.Println("Test:", Test.Tes())
