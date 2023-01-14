@@ -7,6 +7,7 @@ import CollectGarbage from '../src/leetcode/collectgarbage.js';
 import MaxProfit from '../src/leetcode/maxprofit.js';
 import BalancedStrings from '../src/leetcode/balancedstrings.js';
 import RuleMatching from '../src/leetcode/rulematching.js';
+import SentenceSorting from '../src/leetcode/sentencesorting.js';
 export default class CustomBenchmark {
     static DecibinaryBenchmark(s) {
         this.suite = new Benchmark.Suite();
@@ -104,6 +105,21 @@ export default class CustomBenchmark {
         })
             .add('RuleMatching#FastSolver', () => {
             RuleMatching.FastSolver(input.items, input.ruleKey, input.ruleValue);
+        })
+            // add listeners
+            .on('cycle', (event) => {
+            log(String(event.target));
+        })
+            .on('complete', function () {
+            log(`The fastest method is ${this.filter('fastest').map('name')}`);
+        })
+            // run async or not
+            .run({ async: false });
+    }
+    static SentenceSortingBenchmark(input) {
+        this.suite = new Benchmark.Suite();
+        this.suite.add('SentenceSorting#Solver', () => {
+            SentenceSorting.Solver(input);
         })
             // add listeners
             .on('cycle', (event) => {

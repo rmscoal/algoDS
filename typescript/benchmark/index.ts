@@ -11,3 +11,4 @@ CustomBenchmark.RuleMatchingBenchmark({
   ruleKey: 'color',
   ruleValue: 'silver',
 });
+CustomBenchmark.SentenceSortingBenchmark('is2 sentence4 This1 a3');

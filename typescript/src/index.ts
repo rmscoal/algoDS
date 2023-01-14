@@ -5,6 +5,7 @@ import CollectGarbage from './leetcode/collectgarbage.js';
 import MaxProfit from './leetcode/maxprofit.js';
 import BalancedStrings from './leetcode/balancedstrings.js';
 import RuleMatching from './leetcode/rulematching.js';
+import SentenceSorting from './leetcode/sentencesorting.js';
 
 log('------------ Welcome to Competitive Programming ------------\n');
 
@@ -39,3 +40,6 @@ log('Balanced Strings Solver: ', BalancedStrings.Solver('RLRRLLRLRL'));
 log('Balanced Strings Solver: ', BalancedStrings.Solver('RLRRRLLRLL'));
 
 log('Rule Matcing Solver:', RuleMatching.Solver([['phone', 'blue', 'pixel'], ['computer', 'silver', 'phone'], ['phone', 'gold', 'iphone']], 'type', 'phone'));
+
+log('Sentence Sorting Solver:', SentenceSorting.Solver('is2 sentence4 This1 a3'));
+log('Sentence Sorting Solver:', SentenceSorting.Solver('Myself2 Me1 I4 and3'));
