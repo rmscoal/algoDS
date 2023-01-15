@@ -189,6 +189,10 @@ func main() {
 	fmt.Println("Keep City Skyline Solver:", KCS.Solver([][]int{{3, 0, 8, 4}, {2, 4, 5, 7}, {9, 2, 6, 3}, {0, 3, 1, 0}}))
 	fmt.Println("Keep City Skyline Solver:", KCS.Solver([][]int{{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}))
 
+	DXORedArray := &leetcode.DecodeXORedArray{}
+	fmt.Println("Decode XORed Array Solver:", DXORedArray.Solver([]int{1, 2, 3}, 1))
+	fmt.Println("Decode XORed Array Solver:", DXORedArray.Solver([]int{6, 2, 7, 3}, 4))
+
 	fmt.Println("------------------Interview-------------------")
 	Test := &interviews.Test{}
 	fmt.Println("Test:", Test.Tes())

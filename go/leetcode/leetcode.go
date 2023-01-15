@@ -34,3 +34,4 @@ type ArrayPermuatation struct{} // easy, array
 type RunningSumArray struct{}   // easy, array
 type ShuffleArray struct{}      // easy, array
 type KeepCitySkyline struct{}   // medium, array
+type DecodeXORedArray struct{}  // easy, array
