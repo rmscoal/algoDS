@@ -12,3 +12,4 @@ CustomBenchmark.RuleMatchingBenchmark({
   ruleValue: 'silver',
 });
 CustomBenchmark.SentenceSortingBenchmark('is2 sentence4 This1 a3');
+CustomBenchmark.PangramSentenceBenchmark('thequickbrownfoxjumpsoverthelazydog');

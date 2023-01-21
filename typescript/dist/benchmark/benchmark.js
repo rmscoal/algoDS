@@ -8,6 +8,7 @@ import MaxProfit from '../src/leetcode/maxprofit.js';
 import BalancedStrings from '../src/leetcode/balancedstrings.js';
 import RuleMatching from '../src/leetcode/rulematching.js';
 import SentenceSorting from '../src/leetcode/sentencesorting.js';
+import PangramSentence from '../src/leetcode/pangramsentence.js';
 export default class CustomBenchmark {
     static DecibinaryBenchmark(s) {
         this.suite = new Benchmark.Suite();
@@ -120,6 +121,21 @@ export default class CustomBenchmark {
         this.suite = new Benchmark.Suite();
         this.suite.add('SentenceSorting#Solver', () => {
             SentenceSorting.Solver(input);
+        })
+            // add listeners
+            .on('cycle', (event) => {
+            log(String(event.target));
+        })
+            .on('complete', function () {
+            log(`The fastest method is ${this.filter('fastest').map('name')}`);
+        })
+            // run async or not
+            .run({ async: false });
+    }
+    static PangramSentenceBenchmark(input) {
+        this.suite = new Benchmark.Suite();
+        this.suite.add('PangramSentence#Solver', () => {
+            PangramSentence.Solver(input);
         })
             // add listeners
             .on('cycle', (event) => {

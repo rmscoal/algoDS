@@ -6,6 +6,7 @@ import MaxProfit from './leetcode/maxprofit.js';
 import BalancedStrings from './leetcode/balancedstrings.js';
 import RuleMatching from './leetcode/rulematching.js';
 import SentenceSorting from './leetcode/sentencesorting.js';
+import PangramSentence from './leetcode/pangramsentence.js';
 
 log('------------ Welcome to Competitive Programming ------------\n');
 
@@ -43,3 +44,6 @@ log('Rule Matcing Solver:', RuleMatching.Solver([['phone', 'blue', 'pixel'], ['c
 
 log('Sentence Sorting Solver:', SentenceSorting.Solver('is2 sentence4 This1 a3'));
 log('Sentence Sorting Solver:', SentenceSorting.Solver('Myself2 Me1 I4 and3'));
+
+log('Pangram Sentence Solver:', PangramSentence.Solver('thequickbrownfoxjumpsoverthelazydog'));
+log('Pangram Sentence Solver:', PangramSentence.Solver('leetcode'));
