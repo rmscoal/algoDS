@@ -12,4 +12,8 @@ CustomBenchmark.RuleMatchingBenchmark({
 });
 CustomBenchmark.SentenceSortingBenchmark('is2 sentence4 This1 a3');
 CustomBenchmark.PangramSentenceBenchmark('thequickbrownfoxjumpsoverthelazydog');
+CustomBenchmark.TwoStringArrayBenchmark({
+    word1: ['abc', 'd', 'defg'],
+    word2: ['abcddefg'],
+});
 //# sourceMappingURL=index.js.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"twostringarray.js","sourceRoot":"","sources":["../../../src/leetcode/twostringarray.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,OAAO,cAAc;IAC1B,MAAM,CAAC,MAAM,CAAC,KAAoB,EAAE,KAAoB;QAC7D,MAAM,SAAS,GAAG,KAAK,CAAC,IAAI,CAAC,EAAE,CAAC,CAAC;QACjC,MAAM,SAAS,GAAG,KAAK,CAAC,IAAI,CAAC,EAAE,CAAC,CAAC;QAEjC,OAAO,SAAS,KAAK,SAAS,CAAC;IACjC,CAAC;CACF"}

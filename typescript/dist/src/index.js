@@ -7,6 +7,7 @@ import BalancedStrings from './leetcode/balancedstrings.js';
 import RuleMatching from './leetcode/rulematching.js';
 import SentenceSorting from './leetcode/sentencesorting.js';
 import PangramSentence from './leetcode/pangramsentence.js';
+import TwoStringArray from './leetcode/twostringarray.js';
 log('------------ Welcome to Competitive Programming ------------\n');
 log('------------ Leetcode ------------');
 const dec = new Decibinary('1234');
@@ -37,4 +38,7 @@ log('Sentence Sorting Solver:', SentenceSorting.Solver('is2 sentence4 This1 a3')
 log('Sentence Sorting Solver:', SentenceSorting.Solver('Myself2 Me1 I4 and3'));
 log('Pangram Sentence Solver:', PangramSentence.Solver('thequickbrownfoxjumpsoverthelazydog'));
 log('Pangram Sentence Solver:', PangramSentence.Solver('leetcode'));
+log('Equivalence Two String Array:', TwoStringArray.Solver(['ab', 'c'], ['a', 'bc']));
+log('Equivalence Two String Array:', TwoStringArray.Solver(['a', 'cb'], ['ab', 'c']));
+log('Equivalence Two String Array:', TwoStringArray.Solver(['abc', 'd', 'defg'], ['abcddefg']));
 //# sourceMappingURL=index.js.map
