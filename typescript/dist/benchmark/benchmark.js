@@ -138,6 +138,12 @@ export default class CustomBenchmark {
         this.suite.add('PangramSentence#Solver', () => {
             PangramSentence.Solver(input);
         })
+            .add('PangramSentence#OutOfTheBoxSolver', () => {
+            PangramSentence.OutOfTheBoxSolver(input);
+        })
+            .add('PangramSentence#FastSolver', () => {
+            PangramSentence.FastSolver(input);
+        })
             // add listeners
             .on('cycle', (event) => {
             log(String(event.target));

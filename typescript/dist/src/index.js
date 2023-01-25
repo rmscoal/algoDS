@@ -37,6 +37,7 @@ log('Rule Matcing Solver:', RuleMatching.Solver([['phone', 'blue', 'pixel'], ['c
 log('Sentence Sorting Solver:', SentenceSorting.Solver('is2 sentence4 This1 a3'));
 log('Sentence Sorting Solver:', SentenceSorting.Solver('Myself2 Me1 I4 and3'));
 log('Pangram Sentence Solver:', PangramSentence.Solver('thequickbrownfoxjumpsoverthelazydog'));
+log('Pangram Sentence Solver:', PangramSentence.FastSolver('thequickbrownfoxjumpsoverthelazydog'));
 log('Pangram Sentence Solver:', PangramSentence.Solver('leetcode'));
 log('Equivalence Two String Array:', TwoStringArray.Solver(['ab', 'c'], ['a', 'bc']));
 log('Equivalence Two String Array:', TwoStringArray.Solver(['a', 'cb'], ['ab', 'c']));
