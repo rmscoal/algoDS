@@ -193,6 +193,9 @@ func main() {
 	fmt.Println("Decode XORed Array Solver:", DXORedArray.Solver([]int{1, 2, 3}, 1))
 	fmt.Println("Decode XORed Array Solver:", DXORedArray.Solver([]int{6, 2, 7, 3}, 4))
 
+	SIG := &leetcode.StayingInGrid{}
+	fmt.Println("Stay In Grid:", SIG.Solver(3, []int{0, 1}, "RRDDLU"))
+
 	fmt.Println("------------------Interview-------------------")
 	Test := &interviews.Test{}
 	fmt.Println("Test:", Test.Tes())
