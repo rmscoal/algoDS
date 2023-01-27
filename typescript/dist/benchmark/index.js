@@ -16,4 +16,9 @@ CustomBenchmark.TwoStringArrayBenchmark({
     word1: ['abc', 'd', 'defg'],
     word2: ['abcddefg'],
 });
+CustomBenchmark.StayingInGridBencmark({
+    n: 100,
+    startPos: [60, 52],
+    s: 'LLLDURDLRUURRLLDLDLRUUDDDLRLRUUDDLRRLRRLDUDLLLRDLRUDL',
+});
 //# sourceMappingURL=index.js.map

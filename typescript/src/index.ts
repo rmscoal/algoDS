@@ -8,6 +8,7 @@ import RuleMatching from './leetcode/rulematching.js';
 import SentenceSorting from './leetcode/sentencesorting.js';
 import PangramSentence from './leetcode/pangramsentence.js';
 import TwoStringArray from './leetcode/twostringarray.js';
+import StayingIngrid from './leetcode/stayingingrid.js';
 
 log('------------ Welcome to Competitive Programming ------------\n');
 
@@ -53,3 +54,5 @@ log('Pangram Sentence Solver:', PangramSentence.Solver('leetcode'));
 log('Equivalence Two String Array:', TwoStringArray.Solver(['ab', 'c'], ['a', 'bc']));
 log('Equivalence Two String Array:', TwoStringArray.Solver(['a', 'cb'], ['ab', 'c']));
 log('Equivalence Two String Array:', TwoStringArray.Solver(['abc', 'd', 'defg'], ['abcddefg']));
+
+log('Staying In Grid:', StayingIngrid.FastSolver(3, [0, 1], 'RRDDLU'));

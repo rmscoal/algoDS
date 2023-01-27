@@ -10,6 +10,7 @@ import RuleMatching from '../src/leetcode/rulematching.js';
 import SentenceSorting from '../src/leetcode/sentencesorting.js';
 import PangramSentence from '../src/leetcode/pangramsentence.js';
 import TwoStringArray from '../src/leetcode/twostringarray.js';
+import StayingIngrid from '../src/leetcode/stayingingrid.js';
 
 export default class CustomBenchmark {
   static suite: Benchmark.Suite;
@@ -185,6 +186,27 @@ export default class CustomBenchmark {
     this.suite.add('TwoStringArray#Solver', () => {
       TwoStringArray.Solver(input.word1, input.word2);
     })
+      .on('cycle', (event: { target: any; }) => {
+        log(String(event.target));
+      })
+      .on('complete', function () {
+        log(`The fastest method is ${this.filter('fastest').map('name')}`);
+      })
+      // run async or not
+      .run({ async: false });
+  }
+
+  public static StayingInGridBencmark(input: {
+    n: number, startPos: Array<number>, s: string
+  }): void {
+    this.suite = new Benchmark.Suite();
+
+    this.suite.add('StayingInGrid#Solver', () => {
+      StayingIngrid.Solver(input.n, input.startPos, input.s);
+    })
+      .add('StayingInGrid#FastSolver', () => {
+        StayingIngrid.FastSolver(input.n, input.startPos, input.s);
+      })
       .on('cycle', (event: { target: any; }) => {
         log(String(event.target));
       })
