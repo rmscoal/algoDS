@@ -11,6 +11,7 @@ import SentenceSorting from '../src/leetcode/sentencesorting.js';
 import PangramSentence from '../src/leetcode/pangramsentence.js';
 import TwoStringArray from '../src/leetcode/twostringarray.js';
 import StayingIngrid from '../src/leetcode/stayingingrid.js';
+import UniqueMorseCode from '../src/leetcode/uniquemorsecode.js';
 export default class CustomBenchmark {
     static DecibinaryBenchmark(s) {
         this.suite = new Benchmark.Suite();
@@ -176,6 +177,26 @@ export default class CustomBenchmark {
         })
             .add('StayingInGrid#FastSolver', () => {
             StayingIngrid.FastSolver(input.n, input.startPos, input.s);
+        })
+            .on('cycle', (event) => {
+            log(String(event.target));
+        })
+            .on('complete', function () {
+            log(`The fastest method is ${this.filter('fastest').map('name')}`);
+        })
+            // run async or not
+            .run({ async: false });
+    }
+    static UniqueMorseCodeBencmark(input) {
+        this.suite = new Benchmark.Suite();
+        this.suite.add('UniqueMorseCode#Solver', () => {
+            UniqueMorseCode.Solver(input);
+        })
+            .add('UniqueMorseCode#MapSolver', () => {
+            UniqueMorseCode.MapSolver(input);
+        })
+            .add('UniqueMorseCode#UsingNewMapSolver', () => {
+            UniqueMorseCode.UsingNewMapSolver(input);
         })
             .on('cycle', (event) => {
             log(String(event.target));

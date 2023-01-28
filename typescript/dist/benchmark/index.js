@@ -21,4 +21,5 @@ CustomBenchmark.StayingInGridBencmark({
     startPos: [60, 52],
     s: 'LLLDURDLRUURRLLDLDLRUUDDDLRLRUUDDLRRLRRLDUDLLLRDLRUDL',
 });
+CustomBenchmark.UniqueMorseCodeBencmark(['gin', 'zen', 'gig', 'msg']);
 //# sourceMappingURL=index.js.map
