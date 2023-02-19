@@ -18,6 +18,9 @@
     "leetcoce",
     "competitive-programmming"
   ],
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
   "author": "rmscoal",
   "license": "ISC",
   "devDependencies": {
