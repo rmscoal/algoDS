@@ -10,6 +10,7 @@ import PangramSentence from './leetcode/pangramsentence.js';
 import TwoStringArray from './leetcode/twostringarray.js';
 import StayingIngrid from './leetcode/stayingingrid.js';
 import UniqueMorseCode from './leetcode/uniquemorsecode.js';
+import MaxLaserBeam from './leetcode/maxlaserbeam.js';
 log('------------ Welcome to Competitive Programming ------------\n');
 log('------------ Leetcode ------------');
 const dec = new Decibinary('1234');
@@ -48,4 +49,5 @@ log('Staying In Grid:', StayingIngrid.FastSolver(3, [0, 1], 'RRDDLU'));
 log('Unique Morse Code Solver:', UniqueMorseCode.Solver(['gin', 'zen', 'gig', 'msg']));
 log('Unique Morse Code Solver:', UniqueMorseCode.MapSolver(['gin', 'zen', 'gig', 'msg']));
 log('Unique Morse Code Solver:', UniqueMorseCode.UsingNewMapSolver(['gin', 'zen', 'gig', 'msg']));
+log('Max Laser Beams Solver:', MaxLaserBeam.Solver(['011001', '000000', '010100', '001000']));
 //# sourceMappingURL=index.js.map

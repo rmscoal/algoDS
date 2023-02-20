@@ -23,3 +23,4 @@ CustomBenchmark.StayingInGridBencmark({
   s: 'LLLDURDLRUURRLLDLDLRUUDDDLRLRUUDDLRRLRRLDUDLLLRDLRUDL',
 });
 CustomBenchmark.UniqueMorseCodeBencmark(['gin', 'zen', 'gig', 'msg']);
+CustomBenchmark.MaxLaserBeamBencmark(['011001', '000000', '010100', '001000', '011001', '000000', '010100', '001000', '011001', '000000', '010100', '001000']);
