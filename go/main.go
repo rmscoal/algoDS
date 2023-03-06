@@ -196,6 +196,11 @@ func main() {
 	SIG := &leetcode.StayingInGrid{}
 	fmt.Println("Stay In Grid:", SIG.Solver(3, []int{0, 1}, "RRDDLU"))
 
+	MMTS := &leetcode.MinMovesToSeat{}
+	fmt.Println("Min Moves To Seat:", MMTS.Solver([]int{3, 1, 5}, []int{2, 7, 4}))
+	fmt.Println("Min Moves To Seat:", MMTS.Solver([]int{4, 1, 5, 9}, []int{1, 3, 2, 6}))
+	fmt.Println("Min Moves To Seat:", MMTS.Solver([]int{2, 2, 6, 6}, []int{1, 3, 2, 6}))
+
 	fmt.Println("------------------Interview-------------------")
 	Test := &interviews.Test{}
 	fmt.Println("Test:", Test.Tes())
