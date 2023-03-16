@@ -201,11 +201,14 @@ func main() {
 	fmt.Println("Min Moves To Seat:", MMTS.Solver([]int{4, 1, 5, 9}, []int{1, 3, 2, 6}))
 	fmt.Println("Min Moves To Seat:", MMTS.Solver([]int{2, 2, 6, 6}, []int{1, 3, 2, 6}))
 
+	UP3 := &leetcode.UniquePathThree{}
+	// UP3.Solver([][]int{{1, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 2, -1}})
+	UP3.Solver([][]int{{0, 1}, {2, 0}})
+
 	fmt.Println("------------------Interview-------------------")
 	Test := &interviews.Test{}
 	fmt.Println("Test:", Test.Tes())
 
 	B := &interviews.Beli{}
 	B.MulaiBeli([]string{"minyak", "bawang merah", "minyak"})
-
 }
