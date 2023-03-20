@@ -11,6 +11,7 @@ import TwoStringArray from './leetcode/twostringarray.js';
 import StayingIngrid from './leetcode/stayingingrid.js';
 import UniqueMorseCode from './leetcode/uniquemorsecode.js';
 import MaxLaserBeam from './leetcode/maxlaserbeam.js';
+import { DeepestLeavesSum, TreeNode } from './leetcode/deepestleavessum.js';
 log('------------ Welcome to Competitive Programming ------------\n');
 log('------------ Leetcode ------------');
 const dec = new Decibinary('1234');
@@ -50,4 +51,13 @@ log('Unique Morse Code Solver:', UniqueMorseCode.Solver(['gin', 'zen', 'gig', 'm
 log('Unique Morse Code Solver:', UniqueMorseCode.MapSolver(['gin', 'zen', 'gig', 'msg']));
 log('Unique Morse Code Solver:', UniqueMorseCode.UsingNewMapSolver(['gin', 'zen', 'gig', 'msg']));
 log('Max Laser Beams Solver:', MaxLaserBeam.Solver(['011001', '000000', '010100', '001000']));
+const tree2leave1 = new TreeNode(7, null, null);
+const tree2leave2 = new TreeNode(8, null, null);
+const tree2node5 = new TreeNode(6, null, tree2leave2);
+const tree2node4 = new TreeNode(5, null, null);
+const tree2node3 = new TreeNode(4, tree2leave1, null);
+const tree2node2 = new TreeNode(3, null, tree2node5);
+const tree2node1 = new TreeNode(2, tree2node3, tree2node4);
+const tree2 = new TreeNode(1, tree2node2, tree2node1);
+log('Deepest Leaves Sum:', DeepestLeavesSum.Solver(tree2));
 //# sourceMappingURL=index.js.map
