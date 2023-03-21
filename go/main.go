@@ -205,6 +205,22 @@ func main() {
 	// UP3.Solver([][]int{{1, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 2, -1}})
 	UP3.Solver([][]int{{0, 1}, {2, 0}})
 
+	tree1leave1 := &leetcode.TreeNode{Val: 1, Left: nil, Right: nil}
+	tree1leave2 := &leetcode.TreeNode{Val: 3, Left: nil, Right: nil}
+	tree1 := &leetcode.TreeNode{Val: 2, Left: tree1leave1, Right: tree1leave2}
+
+	tree2leave1 := &leetcode.TreeNode{Val: 7, Left: nil, Right: nil}
+	tree2leave2 := &leetcode.TreeNode{Val: 8, Left: nil, Right: nil}
+	tree2node5 := &leetcode.TreeNode{Val: 6, Left: nil, Right: tree2leave2}
+	tree2node4 := &leetcode.TreeNode{Val: 5, Left: nil, Right: nil}
+	tree2node3 := &leetcode.TreeNode{Val: 4, Left: tree2leave1, Right: nil}
+	tree2node2 := &leetcode.TreeNode{Val: 3, Left: nil, Right: tree2node5}
+	tree2node1 := &leetcode.TreeNode{Val: 2, Left: tree2node3, Right: tree2node4}
+	tree2 := &leetcode.TreeNode{Val: 1, Left: tree2node2, Right: tree2node1}
+	DLS := &leetcode.DeepestLeavesSum{}
+	fmt.Println("Deepest Leaves Sum:", DLS.Solver(tree1))
+	fmt.Println("Deepest Leaves Sum:", DLS.Solver(tree2))
+
 	fmt.Println("------------------Interview-------------------")
 	Test := &interviews.Test{}
 	fmt.Println("Test:", Test.Tes())

@@ -38,3 +38,5 @@ type KeepCitySkyline struct{}   // medium, array
 type DecodeXORedArray struct{}  // easy, array
 type MinMovesToSeat struct{}    // easy, array
 type UniquePathThree struct{}   // hard, array
+
+type DeepestLeavesSum struct{} // medium, tree
