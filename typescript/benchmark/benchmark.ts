@@ -1,6 +1,6 @@
 /* eslint-disable func-names */
-import Benchmark from 'benchmark';
 import { log } from 'console';
+import Benchmark from 'benchmark';
 import Decibinary from '../src/leetcode/decibinary.js';
 import TwoSum from '../src/leetcode/twosum.js';
 import CollectGarbage from '../src/leetcode/collectgarbage.js';
