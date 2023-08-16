@@ -1,3 +1,4 @@
+/* eslint-disable max-classes-per-file */
 import { log } from 'console';
 import Decibinary from './leetcode/decibinary.js';
 import TwoSum from './leetcode/twosum.js';
@@ -12,6 +13,7 @@ import StayingIngrid from './leetcode/stayingingrid.js';
 import UniqueMorseCode from './leetcode/uniquemorsecode.js';
 import MaxLaserBeam from './leetcode/maxlaserbeam.js';
 import { DeepestLeavesSum, TreeNode } from './leetcode/deepestleavessum.js';
+import IsInstance from './leetcode/isinstance.js';
 
 log('------------ Welcome to Competitive Programming ------------\n');
 
@@ -75,3 +77,15 @@ const tree2node2 = new TreeNode(3, null, tree2node5);
 const tree2node1 = new TreeNode(2, tree2node3, tree2node4);
 const tree2 = new TreeNode(1, tree2node2, tree2node1);
 log('Deepest Leaves Sum:', DeepestLeavesSum.Solver(tree2));
+
+class Animal {}
+const animal = new Animal();
+class Mammal extends Animal {}
+const mammal = new Mammal();
+log('Check if object is instance of class:', IsInstance.Solver(animal, Animal));
+log('Check if object is instance of class:', IsInstance.Solver(mammal, Animal));
+log('Check if object is instance of class:', IsInstance.Solver(5, '0'));
+log('Check if object is instance of class:', IsInstance.Solver(5, String));
+log('Check if object is instance of class:', IsInstance.Solver(5n, BigInt));
+log('Check if object is instance of class:', IsInstance.Solver(5n, Object));
+log('Check if object is instance of class:', IsInstance.Solver(Object, Object));
