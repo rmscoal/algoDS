@@ -3,8 +3,8 @@
 **/package-lock.json
 **/yarn.lock
 
-# Ignoreing golang setups
-**/go.mod
+# Built folder
+typescript/dist
 
 # vscode settings
 .vscode

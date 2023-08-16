@@ -5,14 +5,14 @@
   "main": "dist/src/index.js",
   "type": "module",
   "scripts": {
-    "start": "node typescript/dist/src/index.js # Only start, but requires build",
-    "dev": "npx nodemon # Development",
-    "build": "tsc # Only builds",
+    "build": "tsc",
+    "test": "mocha",
+    "dev": "npx nodemon",
     "lint": "eslint . --ext .ts",
     "lint-and-fix": "eslint . --ext .ts --fix",
-    "sb": "tsc && node ./typescript/dist/src/index.js # Build and then run. 'sb' stands for start & build",
-    "test": "mocha",
-    "benchmark": "tsc && node typescript/dist/benchmark/index.js # Builds then benchmark"
+    "start": "node typescript/dist/src/index.js",
+    "sb": "tsc && node ./typescript/dist/src/index.js",
+    "benchmark": "tsc && node typescript/dist/benchmark/index.js"
   },
   "keywords": [
     "leetcoce",
