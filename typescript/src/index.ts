@@ -14,6 +14,8 @@ import UniqueMorseCode from './leetcode/uniquemorsecode.js';
 import MaxLaserBeam from './leetcode/maxlaserbeam.js';
 import { DeepestLeavesSum, TreeNode } from './leetcode/deepestleavessum.js';
 import IsInstance from './leetcode/isinstance.js';
+import { ListNode } from './leetcode/types.js';
+import AddTwoNumbers from './leetcode/addtwonumbers.js';
 
 log('------------ Welcome to Competitive Programming ------------\n');
 
@@ -89,3 +91,8 @@ log('Check if object is instance of class:', IsInstance.Solver(5, String));
 log('Check if object is instance of class:', IsInstance.Solver(5n, BigInt));
 log('Check if object is instance of class:', IsInstance.Solver(5n, Object));
 log('Check if object is instance of class:', IsInstance.Solver(Object, Object));
+
+log('Add Two Numbers Solver:', AddTwoNumbers.Solver(ListNode.newFromArray([2, 4, 3]), ListNode.newFromArray([5, 6, 4])));
+log('Add Two Numbers Solver:', AddTwoNumbers.Solver(ListNode.newFromArray([0]), ListNode.newFromArray([0])));
+log('Add Two Numbers Solver:', AddTwoNumbers.Solver(ListNode.newFromArray([9, 9, 9, 9, 9, 9, 9]), ListNode.newFromArray([9, 9, 9, 9])));
+log('Add Two Numbers Clean Solver:', AddTwoNumbers.CleanSolver(ListNode.newFromArray([9, 9, 9, 9, 9, 9, 9]), ListNode.newFromArray([9, 9, 9, 9])));
