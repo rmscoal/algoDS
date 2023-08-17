@@ -1,10 +1,5 @@
 package leetcode
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
 // list1 and list2 is the head node.
 func (M *MergeTwoList) Solver(list1 *ListNode, list2 *ListNode) *ListNode {
 	result := ListNode{}

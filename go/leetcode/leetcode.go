@@ -1,42 +1,50 @@
 package leetcode
 
-type RomanToInt struct{}                // easy
-type TwoSum struct{}                    // easy
-type PalindromeNumber struct{}          // easy
-type LongestCommonPrefix struct{}       // easy
-type SearchInsertPosition struct{}      // easy
-type MergeTwoList struct{}              // easy
-type ValidParenthesis struct{}          // easy
-type RemoveElement struct{}             // easy
-type RemoveDuplicate struct{}           // easy
-type LengthLastWord struct{}            // easy
-type PlusOne struct{}                   // easy
-type AddBinary struct{}                 // easy
-type MaxProfit struct{}                 // easy
-type SQRT struct{}                      // easy
-type ClimbingStairs struct{}            // easy
-type RemoveDuplicateSortedList struct{} // easy
+type (
+	RomanToInt                struct{} // easy
+	TwoSum                    struct{} // easy
+	PalindromeNumber          struct{} // easy
+	LongestCommonPrefix       struct{} // easy
+	SearchInsertPosition      struct{} // easy
+	MergeTwoList              struct{} // easy
+	ValidParenthesis          struct{} // easy
+	RemoveElement             struct{} // easy
+	RemoveDuplicate           struct{} // easy
+	LengthLastWord            struct{} // easy
+	PlusOne                   struct{} // easy
+	AddBinary                 struct{} // easy
+	MaxProfit                 struct{} // easy
+	SQRT                      struct{} // easy
+	ClimbingStairs            struct{} // easy
+	RemoveDuplicateSortedList struct{} // easy
+)
 
-type PartitioningDeciBinary struct{} // medium, string
-type IPAddress struct{}              // easy, string
-type NewLanguage struct{}            // easy, string
-type Jewel struct{}                  // easy, string
-type LongestSentence struct{}        // easy, string
-type GoalParser struct{}             // easy, string
-type EncodeAndDecodeURL struct{}     // medium, string
-type ShuffleString struct{}          // easy, string
-type ExcelSheet struct{}             // easy, string
-type MoveBallToBox struct{}          // medium string
-type CollectGarbage struct{}         // medium, string
-type DecodeMessage struct{}          // medium, string
-type StayingInGrid struct{}          // medium, string
+type (
+	PartitioningDeciBinary struct{} // medium, string
+	IPAddress              struct{} // easy, string
+	NewLanguage            struct{} // easy, string
+	Jewel                  struct{} // easy, string
+	LongestSentence        struct{} // easy, string
+	GoalParser             struct{} // easy, string
+	EncodeAndDecodeURL     struct{} // medium, string
+	ShuffleString          struct{} // easy, string
+	ExcelSheet             struct{} // easy, string
+	MoveBallToBox          struct{} // medium string
+	CollectGarbage         struct{} // medium, string
+	DecodeMessage          struct{} // medium, string
+	StayingInGrid          struct{} // medium, string
+)
 
-type ArrayPermuatation struct{} // easy, array
-type RunningSumArray struct{}   // easy, array
-type ShuffleArray struct{}      // easy, array
-type KeepCitySkyline struct{}   // medium, array
-type DecodeXORedArray struct{}  // easy, array
-type MinMovesToSeat struct{}    // easy, array
-type UniquePathThree struct{}   // hard, array
+type (
+	ArrayPermuatation struct{} // easy, array
+	RunningSumArray   struct{} // easy, array
+	ShuffleArray      struct{} // easy, array
+	KeepCitySkyline   struct{} // medium, array
+	DecodeXORedArray  struct{} // easy, array
+	MinMovesToSeat    struct{} // easy, array
+	UniquePathThree   struct{} // hard, array
+)
 
 type DeepestLeavesSum struct{} // medium, tree
+
+type AddTwoNumbers struct{} // medium, linkedlist

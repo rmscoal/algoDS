@@ -6,12 +6,6 @@ import (
 
 var mu sync.Mutex
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
 func (p *DeepestLeavesSum) Solver(root *TreeNode) int {
 	if root == nil {
 		return 0
@@ -88,7 +82,6 @@ func (p *DeepestLeavesSum) FasterSolver(root *TreeNode) int {
 			sum += curr.Val
 			if curr.Left != nil {
 				queue = append(queue, curr.Left)
-
 			}
 
 			if curr.Right != nil {

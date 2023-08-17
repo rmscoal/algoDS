@@ -222,6 +222,17 @@ func main() {
 	fmt.Println("Deepest Leaves Sum:", DLS.Solver(tree1))
 	fmt.Println("Deepest Leaves Sum:", DLS.Solver(tree2))
 
+	ATN := &leetcode.AddTwoNumbers{}
+	l4 := leetcode.GenerateSingleLinkedListFromSlice([]int{2, 4, 3})
+	l5 := leetcode.GenerateSingleLinkedListFromSlice([]int{5, 6, 4})
+	l6 := leetcode.GenerateSingleLinkedListFromSlice([]int{1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1})
+	l7 := leetcode.GenerateSingleLinkedListFromSlice([]int{5, 6, 4})
+	l8 := leetcode.GenerateSingleLinkedListFromSlice([]int{9, 9, 9, 9, 9, 9, 9})
+	l9 := leetcode.GenerateSingleLinkedListFromSlice([]int{9, 9, 9, 9})
+	fmt.Printf("Add Two Numbers: %+v\n", ATN.Solver(l4, l5))
+	fmt.Printf("Add Two Numbers: %+v\n", ATN.Solver(l6, l7))
+	fmt.Printf("Add Two Numbers: %+v\n", ATN.Solver(l8, l9))
+
 	fmt.Println("------------------Interview-------------------")
 	Test := &interviews.Test{}
 	fmt.Println("Test:", Test.Tes())
