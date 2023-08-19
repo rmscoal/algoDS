@@ -16,6 +16,7 @@ import { DeepestLeavesSum, TreeNode } from './leetcode/deepestleavessum.js';
 import IsInstance from './leetcode/isinstance.js';
 import { ListNode } from './leetcode/types.js';
 import AddTwoNumbers from './leetcode/addtwonumbers.js';
+import MostWater from './leetcode/mostwater.js';
 
 log('------------ Welcome to Competitive Programming ------------\n');
 
@@ -96,3 +97,8 @@ log('Add Two Numbers Solver:', AddTwoNumbers.Solver(ListNode.newFromArray([2, 4,
 log('Add Two Numbers Solver:', AddTwoNumbers.Solver(ListNode.newFromArray([0]), ListNode.newFromArray([0])));
 log('Add Two Numbers Solver:', AddTwoNumbers.Solver(ListNode.newFromArray([9, 9, 9, 9, 9, 9, 9]), ListNode.newFromArray([9, 9, 9, 9])));
 log('Add Two Numbers Clean Solver:', AddTwoNumbers.CleanSolver(ListNode.newFromArray([9, 9, 9, 9, 9, 9, 9]), ListNode.newFromArray([9, 9, 9, 9])));
+
+log('Container with Most Water Solver:', MostWater.Solver([1, 8, 6, 2, 5, 4, 8, 3, 7]));
+log('Container with Most Water Solver:', MostWater.Solver([1, 1]));
+log('Container with Most Water PerfSolver:', MostWater.PerfSolver([1, 8, 6, 2, 5, 4, 8, 3, 7]));
+log('Container with Most Water PerfSolver:', MostWater.PerfSolver([1, 1]));
