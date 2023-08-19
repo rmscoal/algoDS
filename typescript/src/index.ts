@@ -17,6 +17,7 @@ import IsInstance from './leetcode/isinstance.js';
 import { ListNode } from './leetcode/types.js';
 import AddTwoNumbers from './leetcode/addtwonumbers.js';
 import MostWater from './leetcode/mostwater.js';
+import FirstAndLast from './leetcode/firstandlast.js';
 
 log('------------ Welcome to Competitive Programming ------------\n');
 
@@ -102,3 +103,10 @@ log('Container with Most Water Solver:', MostWater.Solver([1, 8, 6, 2, 5, 4, 8, 
 log('Container with Most Water Solver:', MostWater.Solver([1, 1]));
 log('Container with Most Water PerfSolver:', MostWater.PerfSolver([1, 8, 6, 2, 5, 4, 8, 3, 7]));
 log('Container with Most Water PerfSolver:', MostWater.PerfSolver([1, 1]));
+
+log('Find First and Last Position of Elements in Sorted Array', FirstAndLast.Solver([5, 7, 7, 8, 8, 10], 8));
+log('Find First and Last Position of Elements in Sorted Array', FirstAndLast.Solver([5, 7, 7, 8, 8, 10], 6));
+log('Find First and Last Position of Elements in Sorted Array', FirstAndLast.Solver([], 0));
+log('Find First and Last Position of Elements in Sorted Array', FirstAndLast.Solver([1], 1));
+log('Find First and Last Position of Elements in Sorted Array', FirstAndLast.Solver([0, 0, 1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 5, 6, 6, 6, 6, 7, 8], 3));
+log('Find First and Last Position of Elements in Sorted Array', FirstAndLast.Solver([1, 2, 2, 3, 4, 4, 4], 4));
