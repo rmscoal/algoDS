@@ -21,10 +21,3 @@ func (this *SubrectangleQueries) UpdateSubrectangle(row1 int, col1 int, row2 int
 func (this *SubrectangleQueries) GetValue(row int, col int) int {
 	return this.Matrix[row][col]
 }
-
-// func (S *SubrectangleQueries) Solver(cmds []string) []int {
-// 	obj := Constructor()
-// 	for _, cmd := range cmds {
-// 		switch
-// 	}
-// }
