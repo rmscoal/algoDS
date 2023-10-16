@@ -1,5 +1,6 @@
 from typing import List
 
+
 def bubble_sort(arr: List[int]):
     '''
     bubble_sort implements a bubble sort algorithm. Passing a list
@@ -22,12 +23,18 @@ def bubble_sort(arr: List[int]):
                 arr[j], arr[j+1] = arr[j+1], arr[j]
                 swapped = True
 
+        print("Iteration at i =", i)
+        print("Array:", arr)
+
         if swapped == False:
             break
+
 
 if __name__ == "__main__":
     arr = [14, 33, 27, 35, 10]
 
+    print("Before: ", arr)
+
     bubble_sort(arr)
 
-    print("Array: ", arr)
+    print("Result: ", arr)
