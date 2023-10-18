@@ -19,7 +19,6 @@ func (B *Beli) MulaiBeli(list []string) {
 	ansHashMap := make(map[string][2]int)
 
 	for _, v := range list {
-
 		// Checks whether the key exists in our hashMap.
 		// If it doesn't we are just going to ignore.
 		if _, exists := hashMapper[v]; exists {
@@ -36,8 +35,6 @@ func (B *Beli) MulaiBeli(list []string) {
 					ansHashMap["minyak"] = [2]int{ansHashMap["minyak"][0], ansHashMap["minyak"][1] + 1*hashMapper[v][1]/2}
 				}
 			}
-		} else {
-			continue
 		}
 	}
 
