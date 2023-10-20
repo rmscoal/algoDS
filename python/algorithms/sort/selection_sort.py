@@ -21,7 +21,22 @@ def selection_sort(values: List) -> List:
     return result
 
 
+def selection_sort_v2(arr: List) -> List:
+    for i in range(len(arr)):
+        smallest = math.inf
+        smallest_index = 0
+        for j in range(i, len(arr)):
+            if smallest >= arr[j]:
+                smallest = arr[j]
+                smallest_index = j
+        arr[i], arr[smallest_index] = arr[smallest_index], arr[i]
+
+    return arr
+
+
 if __name__ == "__main__":
     numbers = [45, 23, 42, 65, 2, 4, 6]
-
     print(selection_sort(numbers))
+
+    numbers = [64, 25, 12, 22, 11]
+    print(selection_sort_v2(numbers))
