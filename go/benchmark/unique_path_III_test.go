@@ -5,9 +5,10 @@
 package benchmark
 
 import (
-	"competitive/leetcode"
 	"fmt"
 	"testing"
+
+	"algoDS/go/leetcode"
 )
 
 var uniquePathIIITestCases = []struct {

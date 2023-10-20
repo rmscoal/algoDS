@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"competitive/interviews"
-	"competitive/leetcode"
-	"competitive/vidio"
+	"algoDS/go/interviews"
+	"algoDS/go/leetcode"
+	"algoDS/go/vidio"
 )
 
 /*

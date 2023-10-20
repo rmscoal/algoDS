@@ -5,7 +5,6 @@ import (
 )
 
 func (RD *RemoveDuplicate) Solver(nums []int) int {
-
 	if len(nums) <= 1 {
 		return len(nums)
 	}

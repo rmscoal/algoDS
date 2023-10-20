@@ -1,18 +1,22 @@
 package benchmark
 
 import (
-	"competitive/leetcode"
 	"fmt"
 	"testing"
+
+	"algoDS/go/leetcode"
 )
 
 // Benchmarking with various inputs
 var keepCitySkylineTestCases = []struct {
 	input [][]int
 }{
-	{input: [][]int{{3, 0, 8, 4, 3, 0, 8, 4, 3, 0, 8, 4},
-		{2, 4, 5, 7, 2, 4, 5, 7, 2, 4, 5, 7}, {9, 2, 6, 3, 9, 2, 6, 3, 9, 2, 6, 3},
-		{0, 3, 1, 0, 0, 3, 1, 0, 0, 3, 1, 0}}},
+	{input: [][]int{
+		{3, 0, 8, 4, 3, 0, 8, 4, 3, 0, 8, 4},
+		{2, 4, 5, 7, 2, 4, 5, 7, 2, 4, 5, 7},
+		{9, 2, 6, 3, 9, 2, 6, 3, 9, 2, 6, 3},
+		{0, 3, 1, 0, 0, 3, 1, 0, 0, 3, 1, 0},
+	}},
 	{input: [][]int{{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}},
 }
 

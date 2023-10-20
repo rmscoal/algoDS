@@ -200,6 +200,9 @@ def sliding_window_q_4_solution_2(arr: List[int], k: int) -> int:
 
 
 if __name__ == "__main__":
+    ##################
+    #   Question 1   #
+    ##################
     print("Answer Question 1", sliding_window_q_1(
         [3, 1, 2, 7, 4, 2, 1, 1, 5], 8))  # 4
 

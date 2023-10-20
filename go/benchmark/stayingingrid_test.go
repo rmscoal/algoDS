@@ -1,9 +1,10 @@
 package benchmark
 
 import (
-	"competitive/leetcode"
 	"fmt"
 	"testing"
+
+	"algoDS/go/leetcode"
 )
 
 var stayingInGridTestCases = []struct {
