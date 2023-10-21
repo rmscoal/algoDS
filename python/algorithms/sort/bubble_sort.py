@@ -23,18 +23,33 @@ def bubble_sort(arr: List[int]):
                 arr[j], arr[j+1] = arr[j+1], arr[j]
                 swapped = True
 
-        print("Iteration at i =", i)
-        print("Array:", arr)
-
         if swapped == False:
             break
+
+def bubble_sort_v2(arr: List[int]):
+    n = len(arr)
+
+    for i in range(n):
+        swapped = False
+        for j in range(n-1-i):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                swapped = True
+
+        if not swapped:
+            break
+
 
 
 if __name__ == "__main__":
     arr = [14, 33, 27, 35, 10]
 
     print("Before: ", arr)
-
     bubble_sort(arr)
+    print("Result: ", arr)
 
+    arr = [5,4,3,2,1]
+
+    print("Before: ", arr)
+    bubble_sort_v2(arr)
     print("Result: ", arr)
