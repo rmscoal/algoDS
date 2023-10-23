@@ -1,7 +1,6 @@
 package arrays
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -20,8 +19,6 @@ func insertValueIntoSortedArray(slc []int32, value int32) []int32 {
 	index := sort.Search(len(slc), func(i int) bool {
 		return slc[i] >= value
 	})
-
-	fmt.Println("Index", index)
 
 	// Insert the value at the determined index
 	return append(slc[:index], append([]int32{value}, slc[index:]...)...)
