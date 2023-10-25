@@ -42,3 +42,28 @@ func TestRemoveDuplicate(t *testing.T) {
 		})
 	}
 }
+
+func TestRemoveDuplicate_2(t *testing.T) {
+	tests := map[string]struct {
+		inputs   []int
+		expected int
+	}{
+		"test_1": {
+			inputs:   []int{1, 1, 1, 2, 2, 3},
+			expected: 5,
+		},
+		"test_2": {
+			inputs:   []int{0, 0, 1, 1, 1, 1, 2, 3, 3},
+			expected: 7,
+		},
+	}
+
+	for name, test := range tests {
+		t.Run(fmt.Sprintf("Remove duplicate 2 %s", name), func(t *testing.T) {
+			result := removeDuplicates_2(test.inputs)
+			if result != test.expected {
+				t.Fatalf("Expected %d but got %d", test.expected, result)
+			}
+		})
+	}
+}
