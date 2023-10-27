@@ -1,4 +1,4 @@
-package arrays
+package sorting
 
 // Returns if string `a` comes before `b` alphabetically
 func compareAlphabet(a, b string) bool {
