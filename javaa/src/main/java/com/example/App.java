@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.hackerrank.TryTesting;
+import com.example.hackerrank.RepeatedString;
 
 /**
  * Hello world!
@@ -9,6 +9,7 @@ import com.example.hackerrank.TryTesting;
 public class App {
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        TryTesting.testingPackage();
+        System.out.println(RepeatedString.repeatedString("aba", 10));
+        System.out.println(RepeatedString.repeatedString("a", 1000000000000l));
     }
 }
