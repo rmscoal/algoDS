@@ -62,4 +62,44 @@ public class SemiRepititiveSubstr {
 
     return longest;
   }
+
+  /**
+   * This is my best solution so far for:
+   * https://leetcode.com/problems/find-the-longest-semi-repetitive-substring/description/
+   * 
+   * @param s - a string of length 1 <= x <= 50 with character ranging from '0' -
+   *          '9'
+   * @return The longest semi-repititive substring
+   */
+  public static int longestSemiRepititiveSubstringFastest(String s) {
+    if (s.length() == 1) {
+      return 1;
+    }
+
+    // Result variable
+    int longest = 0;
+    // Keeps track of how many pairs are there in the window
+    int pair = 0;
+    // Pointers of our window
+    int left = 0;
+    int right = 1;
+
+    while (right < s.length()) {
+      if (s.charAt(right) == s.charAt(right - 1)) {
+        pair++;
+      }
+
+      while (pair >= 2) {
+        if (s.charAt(left) == s.charAt(left + 1)) {
+          pair--;
+        }
+        left++;
+      }
+
+      longest = Math.max(longest, right - left + 1);
+      right++;
+    }
+
+    return longest;
+  }
 }

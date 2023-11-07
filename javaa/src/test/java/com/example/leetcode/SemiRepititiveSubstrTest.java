@@ -56,4 +56,24 @@ public class SemiRepititiveSubstrTest {
       assertEquals(test.asnwer, SemiRepititiveSubstr.longestSemiRepititiveSubstringV2(test.s));
     }
   }
+
+  @Test
+  void semiRepititiveSubstrFastestTest() {
+    ArrayList<SemiRepititiveSubstrTestCase> tests = new ArrayList<SemiRepititiveSubstrTestCase>();
+    tests.add(new SemiRepititiveSubstrTestCase("2233", 3));
+    tests.add(new SemiRepititiveSubstrTestCase("1111111", 2));
+    tests.add(new SemiRepititiveSubstrTestCase("5494", 4));
+    tests.add(new SemiRepititiveSubstrTestCase("52233", 4));
+    tests.add(new SemiRepititiveSubstrTestCase("12", 2));
+    tests.add(new SemiRepititiveSubstrTestCase("14", 2));
+    tests.add(new SemiRepititiveSubstrTestCase("0123", 4));
+    tests.add(new SemiRepititiveSubstrTestCase("54944", 5));
+    tests.add(new SemiRepititiveSubstrTestCase("00101022", 7));
+    tests.add(new SemiRepititiveSubstrTestCase("0001", 3));
+    tests.add(new SemiRepititiveSubstrTestCase("1", 1));
+
+    for (SemiRepititiveSubstrTestCase test : tests) {
+      assertEquals(test.asnwer, SemiRepititiveSubstr.longestSemiRepititiveSubstringFastest(test.s));
+    }
+  }
 }
