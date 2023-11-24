@@ -34,4 +34,11 @@ public class ContainsDuplicateTest {
     assertEquals(true, ContainsDuplicate.containsNearbyDuplicateV3(new int[] { 99, 99 }, 2));
     assertEquals(false, ContainsDuplicate.containsNearbyDuplicateV3(new int[] { 99, 98 }, 2));
   }
+
+  @Test
+  void containsDuplicate_III_Test() {
+    assertEquals(true, ContainsDuplicate.containsNearbyAlmostDuplicate(new int[] { 1, 2, 3, 1 }, 3, 0));
+    assertEquals(false, ContainsDuplicate.containsNearbyAlmostDuplicate(new int[] { 1, 5, 9, 1, 5, 9 }, 2, 3));
+    assertEquals(true, ContainsDuplicate.containsNearbyAlmostDuplicate(new int[] { -3, 3, -6 }, 2, 3));
+  }
 }

@@ -102,4 +102,50 @@ public class ContainsDuplicate {
 
     return false;
   }
+
+  public static boolean containsNearbyAlmostDuplicate(int[] nums, int indexDiff, int valueDiff) {
+    Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+    for (int i = 0; i < nums.length; i++) {
+      int n = nums[i];
+
+      int bucket = n / (valueDiff + 1);
+
+      if (n < 0) {
+        bucket -= 1;
+      }
+
+      if (map.get(bucket) != null) {
+        return true;
+      }
+
+      map.put(bucket, n);
+
+      // We check upper bucket and then also check lower bucket.
+      if (map.get((bucket + 1)) != null) {
+        int upperValue = map.get((bucket + 1));
+        if (Math.abs(upperValue - n) <= valueDiff) {
+          return true;
+        }
+      }
+
+      if (map.get((bucket - 1)) != null) {
+        int lowerValue = map.get((bucket - 1));
+        if (Math.abs(n - lowerValue) <= valueDiff) {
+          return true;
+        }
+      }
+
+      // Maintain the window
+      if (map.size() > indexDiff) {
+        int keyToRemove = nums[i - indexDiff] / (valueDiff + 1);
+        if (nums[i - indexDiff] < 0) {
+          keyToRemove -= 1;
+        }
+
+        map.remove(keyToRemove);
+      }
+    }
+
+    return false;
+  }
 }
