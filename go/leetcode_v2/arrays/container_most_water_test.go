@@ -5,6 +5,24 @@ import (
 	"testing"
 )
 
+func maxArea(heights []int) int {
+	result := 0
+
+	left, right := 0, len(heights)-1
+
+	for left < right {
+		result = max(result, (right-left)*min(heights[left], heights[right]))
+
+		if heights[left] < heights[right] {
+			left++
+		} else {
+			right--
+		}
+	}
+
+	return result
+}
+
 func TestContainerMostWater(t *testing.T) {
 	tests := map[string]struct {
 		heights []int
