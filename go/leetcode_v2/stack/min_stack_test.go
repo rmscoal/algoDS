@@ -122,3 +122,184 @@ func TestMinStack(t *testing.T) {
 		t.Fatalf("expected Top() to be 0 but got %d", top)
 	}
 }
+
+type MinStack2 struct {
+	// The original stack
+	stack []int
+	// Holds the minimum indexes in the stack
+	mininmums []int
+}
+
+func Constructor2() MinStack2 {
+	return MinStack2{stack: make([]int, 0), mininmums: make([]int, 0)}
+}
+
+func (this *MinStack2) Push(val int) {
+	if len(this.stack) == 0 {
+		this.mininmums = []int{0}
+	} else {
+		currentMinimum := this.stack[this.mininmums[len(this.mininmums)-1]]
+		if val < currentMinimum {
+			this.mininmums = append(this.mininmums, len(this.stack))
+		}
+	}
+
+	this.stack = append(this.stack, val)
+}
+
+func (this *MinStack2) Pop() {
+	poppedIndex := len(this.stack) - 1
+
+	this.stack = this.stack[:poppedIndex]
+
+	if this.mininmums[len(this.mininmums)-1] == poppedIndex {
+		this.mininmums = this.mininmums[:len(this.mininmums)-1]
+	}
+}
+
+func (this *MinStack2) Top() int {
+	return this.stack[len(this.stack)-1]
+}
+
+func (this *MinStack2) GetMin() int {
+	return this.stack[this.mininmums[len(this.mininmums)-1]]
+}
+
+func TestMinStack2(t *testing.T) {
+	minStack := Constructor2()
+
+	minStack.Push(4)
+	minStack.Push(1)
+	minStack.Push(2)
+	minStack.Push(-1)
+	minStack.Push(-2)
+
+	if top := minStack.Top(); top != -2 {
+		t.Fatalf("expected Top() to be -2 but got %d", top)
+	}
+
+	if min := minStack.GetMin(); min != -2 {
+		t.Fatalf("expected GetMin() to be -2 but got %d", min)
+	}
+
+	minStack.Pop()
+
+	if min := minStack.GetMin(); min != -1 {
+		t.Fatalf("expected GetMin() to be -1 but got %d", min)
+	}
+
+	minStack.Pop()
+
+	if min := minStack.GetMin(); min != 1 {
+		t.Fatalf("expected GetMin() to be 1 but got %d", min)
+	}
+
+	minStack.Push(5)
+
+	if min := minStack.GetMin(); min != 1 {
+		t.Fatalf("expected GetMin() to be 1 but got %d", min)
+	}
+
+	if top := minStack.Top(); top != 5 {
+		t.Fatalf("expected Top() to be 5 but got %d", top)
+	}
+
+	minStack.Push(0)
+
+	if min := minStack.GetMin(); min != 0 {
+		t.Fatalf("expected GetMin() to be 0 but got %d", min)
+	}
+
+	if top := minStack.Top(); top != 0 {
+		t.Fatalf("expected Top() to be 0 but got %d", top)
+	}
+}
+
+type MinStackLL struct {
+	head *node
+}
+
+type node struct {
+	val, minVal int
+	prev        *node
+}
+
+func ConstructorLL() MinStackLL {
+	return MinStackLL{}
+}
+
+func (this *MinStackLL) Push(val int) {
+	newNode := &node{val: val, prev: this.head}
+
+	if this.head == nil {
+		newNode.minVal = val
+	} else if val < this.head.minVal {
+		newNode.minVal = val
+	} else {
+		newNode.minVal = this.head.minVal
+	}
+
+	this.head = newNode
+}
+
+func (this *MinStackLL) Pop() {
+	this.head = this.head.prev
+}
+
+func (this *MinStackLL) Top() int {
+	return this.head.val
+}
+
+func (this *MinStackLL) GetMin() int {
+	return this.head.minVal
+}
+
+func TestMinStackLL(t *testing.T) {
+	minStack := ConstructorLL()
+
+	minStack.Push(4)
+	minStack.Push(1)
+	minStack.Push(2)
+	minStack.Push(-1)
+	minStack.Push(-2)
+
+	if top := minStack.Top(); top != -2 {
+		t.Fatalf("expected Top() to be -2 but got %d", top)
+	}
+
+	if min := minStack.GetMin(); min != -2 {
+		t.Fatalf("expected GetMin() to be -2 but got %d", min)
+	}
+
+	minStack.Pop()
+
+	if min := minStack.GetMin(); min != -1 {
+		t.Fatalf("expected GetMin() to be -1 but got %d", min)
+	}
+
+	minStack.Pop()
+
+	if min := minStack.GetMin(); min != 1 {
+		t.Fatalf("expected GetMin() to be 1 but got %d", min)
+	}
+
+	minStack.Push(5)
+
+	if min := minStack.GetMin(); min != 1 {
+		t.Fatalf("expected GetMin() to be 1 but got %d", min)
+	}
+
+	if top := minStack.Top(); top != 5 {
+		t.Fatalf("expected Top() to be 5 but got %d", top)
+	}
+
+	minStack.Push(0)
+
+	if min := minStack.GetMin(); min != 0 {
+		t.Fatalf("expected GetMin() to be 0 but got %d", min)
+	}
+
+	if top := minStack.Top(); top != 0 {
+		t.Fatalf("expected Top() to be 0 but got %d", top)
+	}
+}
