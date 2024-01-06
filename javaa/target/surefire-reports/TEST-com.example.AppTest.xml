@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ID"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/21.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/rifkysatyana/Developer/Github/algoDS/javaa/target/surefire/surefirebooter-20240106205549217_3.jar /Users/rifkysatyana/Developer/Github/algoDS/javaa/target/surefire 2024-01-06T20-55-49_181-jvmRun1 surefire-20240106205549217_1tmp surefire_0-20240106205549217_2tmp"/>
+    <property name="sun.java.command" value="/Users/rifkysatyana/Developer/Github/algoDS/javaa/target/surefire/surefirebooter-20240106212147762_3.jar /Users/rifkysatyana/Developer/Github/algoDS/javaa/target/surefire 2024-01-06T21-21-47_726-jvmRun1 surefire-20240106212147762_1tmp surefire_0-20240106212147762_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/rifkysatyana/Developer/Github/algoDS/javaa/target/test-classes:/Users/rifkysatyana/Developer/Github/algoDS/javaa/target/classes:/Users/rifkysatyana/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.1/junit-jupiter-api-5.8.1.jar:/Users/rifkysatyana/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/rifkysatyana/.m2/repository/org/junit/platform/junit-platform-commons/1.8.1/junit-platform-commons-1.8.1.jar:/Users/rifkysatyana/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/rifkysatyana/Developer/Github/algoDS/javaa/target/surefire/surefirebooter-20240106205549217_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/rifkysatyana/Developer/Github/algoDS/javaa/target/surefire/surefirebooter-20240106212147762_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.1"/>
@@ -62,9 +62,9 @@
   <testcase name="testingPackageTest" classname="com.example.AppTest" time="0.008">
     <system-out><![CDATA[Testing package okay
 ]]></system-out>
-    <system-err><![CDATA[Jan 06, 2024 8:55:49 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
+    <system-err><![CDATA[Jan 06, 2024 9:21:47 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
 WARNING: Configuration error: invalid tag syntax in @Tag("Working Solution") declaration on [void com.example.hackerrank.HourglassSumTest.hourglassSumTest()]. Tag will be ignored.
-Jan 06, 2024 8:55:49 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
+Jan 06, 2024 9:21:47 PM org.junit.jupiter.engine.descriptor.JupiterTestDescriptor lambda$getTags$1
 WARNING: Configuration error: invalid tag syntax in @Tag("Working Solution") declaration on [void com.example.hackerrank.HourglassSumTest.hourglassSumTest()]. Tag will be ignored.
 ]]></system-err>
   </testcase>
