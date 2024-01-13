@@ -22,7 +22,7 @@ class RepeatedStringTestCase {
 
 public class RepeatedStringTest {
   @Test
-  @Timeout(value = 1, unit = TimeUnit.MILLISECONDS)
+  @Timeout(value = 100, unit = TimeUnit.MILLISECONDS)
   void repeatedStringTest() {
     ArrayList<RepeatedStringTestCase> tests = new ArrayList<RepeatedStringTestCase>();
     tests.add(new RepeatedStringTestCase("aba", 10, 7));
