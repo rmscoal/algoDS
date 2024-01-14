@@ -1,6 +1,9 @@
 package com.example.leetcode;
 
 import java.util.Stack;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,8 +49,33 @@ class DailyTemperatureTest {
 
   @Test
   void testDailyTemperature() {
+    DailyTemperatureTest dtTest = new DailyTemperatureTest();
     List<DailyTemperatureTest.TestCase> testcases = new ArrayList<>();
     testcases.add(new DailyTemperatureTest.TestCase(new int[] { 73, 74, 75, 71, 69, 72, 76, 73 },
         new int[] { 1, 1, 4, 2, 1, 1, 0, 0 }));
+
+    for (DailyTemperatureTest.TestCase tc : testcases) {
+      assertArrayEquals(tc.result, dtTest.dailyTemperatures(tc.temperatures));
+      assertArrayEquals(tc.result, dtTest.dailyTemperatures_FAST(tc.temperatures));
+    }
+  }
+
+  public int[] dailyTemperatures_FAST(int[] T) {
+    int n = T.length;
+    int[] res = new int[n];
+    int hottest = 0;
+    for (int i = n - 1; i >= 0; i--) {
+      int temp = T[i];
+      if (temp >= hottest) {
+        hottest = temp;
+        continue;
+      }
+      int days = 1;
+      while (T[i + days] <= temp) {
+        days += res[i + days];
+      }
+      res[i] = days;
+    }
+    return res;
   }
 }
