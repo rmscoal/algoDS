@@ -110,6 +110,11 @@ func TestMinEatingSpeed(t *testing.T) {
 			h:      10,
 			result: 142857143,
 		},
+		{
+			piles:  []int{805306368, 805306368, 805306368},
+			h:      1000000000,
+			result: 3,
+		},
 	}
 
 	for idx, tc := range testcases {
