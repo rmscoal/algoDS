@@ -1,10 +1,10 @@
 package main
 
 import (
-	"algoDS/go/interviews"
+	"fmt"
+
 	"algoDS/go/leetcode"
 	"algoDS/go/vidio"
-	"fmt"
 )
 
 /*
@@ -230,11 +230,4 @@ func main() {
 	fmt.Printf("Add Two Numbers: %+v\n", ATN.Solver(l4, l5))
 	fmt.Printf("Add Two Numbers: %+v\n", ATN.Solver(l6, l7))
 	fmt.Printf("Add Two Numbers: %+v\n", ATN.Solver(l8, l9))
-
-	fmt.Println("------------------Interview-------------------")
-	Test := &interviews.Test{}
-	fmt.Println("Test:", Test.Tes())
-
-	B := &interviews.Beli{}
-	B.MulaiBeli([]string{"minyak", "bawang merah", "minyak"})
 }

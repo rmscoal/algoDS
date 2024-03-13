@@ -1,4 +1,4 @@
-package interviews
+package technicaltest
 
 import (
 	"testing"
