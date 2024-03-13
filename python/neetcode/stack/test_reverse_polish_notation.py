@@ -8,7 +8,7 @@ class TestReversePolishNotation(unittest.TestCase):
     def eval_rpn_slow(self, tokens: List[str]) -> int:
         stack: List[int] = []
 
-        # ["4","13","5","/","+"]
+        # For example we have tokens as ["4","13","5","/","+"]
         # stack = [4, 13, 5]
         # eval(13/5)
         # stack = [4, 2]
