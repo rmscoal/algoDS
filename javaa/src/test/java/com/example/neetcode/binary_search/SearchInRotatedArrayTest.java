@@ -1,4 +1,4 @@
-package com.example.leetcode.binary_search;
+package com.example.neetcode.binary_search;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

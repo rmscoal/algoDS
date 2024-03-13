@@ -1,4 +1,4 @@
-package com.example.leetcode.binary_search;
+package com.example.neetcode.binary_search;
 
 import java.util.List;
 import java.util.ArrayList;
