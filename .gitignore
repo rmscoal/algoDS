@@ -11,6 +11,7 @@ typescript/dist
 
 # Ignoring unwanted files
 */**/.DS_Store
+.idea
 
 # Ignore sql practices folder
 sql
